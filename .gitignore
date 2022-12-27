@@ -1,3 +1,9 @@
 # Project exclude paths
-.idea
 /target/
+/.idea/
+
+/Java/target/
+/Java/Java.iml
+
+/Spring/target/
+/Spring/Spring.iml
