@@ -7,3 +7,12 @@
 
 /Spring/target/
 /Spring/Spring.iml
+
+/Log/target/
+/Log/Log.iml
+
+/Log/common/target/
+/Log/common/common.iml
+
+/Log/log4j_slf4j_test/target/
+/Log/log4j_slf4j_test/log4j_slf4j_test.iml

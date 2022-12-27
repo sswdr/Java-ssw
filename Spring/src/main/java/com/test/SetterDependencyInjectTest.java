@@ -1,4 +1,4 @@
-package test;
+package com.test;
 
 import com.services.HelloService;
 import org.springframework.beans.factory.BeanFactory;
