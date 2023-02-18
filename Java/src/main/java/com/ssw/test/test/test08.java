@@ -45,5 +45,16 @@ public class test08 {
 
         System.out.println(System.currentTimeMillis());
         System.out.println(1/2);
+
+        System.out.println("------------------------------");
+        Calendar calendar = Calendar.getInstance();
+        System.out.println(calendar.getTime().getTime());
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println(calendar.getTime().getTime());
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println(calendar.getTime().getTime());
+
+
+
     }
 }

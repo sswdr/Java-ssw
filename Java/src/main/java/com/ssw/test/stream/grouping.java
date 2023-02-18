@@ -29,14 +29,18 @@ public class grouping {
                 new Cat("cat-01", 1),
                 new Cat("cat-01", 2),
                 new Cat("cat-02", 3),
-                new Cat("cat-03", 0)
+                new Cat("cat-03", 0),
+                new Cat("cat-00", 0)
         );
-        // System.out.println(list); //[Cat(name=cat-01, age=1), Cat(name=cat-01, age=2), Cat(name=cat-02, age=3)]
-        // Map<String, List<Cat>> result = list.stream().collect(Collectors.groupingBy(Cat::getName));
-        // System.out.println(result); //{cat-01=[Cat(name=cat-01, age=1), Cat(name=cat-01, age=2)], cat-02=[Cat(name=cat-02, age=3)]}
+//         System.out.println(list); //[Cat(name=cat-01, age=1), Cat(name=cat-01, age=2), Cat(name=cat-02, age=3), Cat(name=cat-03, age=0), Cat(name=cat-00, age=0)]
+//         Map<String, List<Cat>> result = list.stream().collect(Collectors.groupingBy(Cat::getName));
+//         System.out.println(result); //{cat-01=[Cat(name=cat-01, age=1), Cat(name=cat-01, age=2)], cat-02=[Cat(name=cat-02, age=3)], cat-03=[Cat(name=cat-03, age=0)], cat-00=[Cat(name=cat-00, age=0)]}
 
-        System.out.println(list); //[Cat(name=cat-01, age=1), Cat(name=cat-01, age=2), Cat(name=cat-02, age=3), Cat(name=cat-03, age=0)]
+        System.out.println(list); //[Cat(name=cat-01, age=1), Cat(name=cat-01, age=2), Cat(name=cat-02, age=3), Cat(name=cat-03, age=0), Cat(name=cat-00, age=0)]
         List<Cat> sort = list.stream().sorted(Comparator.comparing(Cat::getAge)).collect(Collectors.toList());
-        System.out.println(sort); //[Cat(name=cat-03, age=0), Cat(name=cat-01, age=1), Cat(name=cat-01, age=2), Cat(name=cat-02, age=3)]
+        System.out.println(sort); //[Cat(name=cat-03, age=0), Cat(name=cat-00, age=0), Cat(name=cat-01, age=1), Cat(name=cat-01, age=2), Cat(name=cat-02, age=3)]
+
+        sort = list.stream().sorted(Comparator.comparing(Cat::getAge).thenComparing(Cat::getName)).collect(Collectors.toList());
+        System.out.println(sort); //[Cat(name=cat-00, age=0), Cat(name=cat-03, age=0), Cat(name=cat-01, age=1), Cat(name=cat-01, age=2), Cat(name=cat-02, age=3)]
     }
 }
