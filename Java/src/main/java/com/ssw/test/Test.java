@@ -17,7 +17,6 @@ public class Test {
 
         System.out.println(NanoId.randomNanoId(4));
 
-
         Boolean aBoolean = new Boolean(true);
         System.out.println(aBoolean);
 
